@@ -1,0 +1,39 @@
+# Entornos virtuales de Python
+venv/
+.venv/
+env/
+ENV/
+*.pyenv
+
+# Archivos de caché y compilados de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.Python
+
+# Archivo de variables de entorno
+# Contiene la API Key y no debe ser versionado.
+.env
+
+# Archivo de configuración específico del usuario
+# Guarda la última ruta del repositorio usada.
+config.json
+
+# Carpeta con los resúmenes generados por la aplicación
+resumenes_generados/
+
+# Archivos de configuración de IDEs/Editores comunes
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Archivos generados por el sistema operativo
+.DS_Store
+Thumbs.db

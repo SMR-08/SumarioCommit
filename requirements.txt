@@ -1,0 +1,4 @@
+# Dependencias necesarias para SumarioCommit
+python-dotenv>=1.0.0
+google-generativeai>=0.5.0
+# Añadir aquí librerías para GUI si se implementa (ej: CustomTkinter)

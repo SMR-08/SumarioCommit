@@ -7,8 +7,6 @@
 3.  La IA extrae las **tareas realizadas** y los **aprendizajes clave** basándose *únicamente* en el código modificado y los mensajes de commit.
 4.  Presenta este resumen en tu terminal y lo guarda automáticamente en un archivo Markdown (`.md`) fechado en la carpeta `resumenes_generados/` para tu registro.
 
-El objetivo es que, al final del día, con solo hacer tu commit habitual, puedas ejecutar esta herramienta y obtener un resumen útil de lo que hiciste y aprendiste.
-
 ## Características
 
 *   **Interfaz CLI sencilla:** Menú interactivo en la consola para todas las acciones.
@@ -42,38 +40,33 @@ Sigue estos pasos exactamente:
         ```
         *Nota: Si tienes varias versiones de Python, podrías necesitar usar `pip3` en lugar de `pip`.*
 
-3.  **Crea el Archivo de Configuración Esencial (`.env`):**
-    *   Dentro de la **carpeta raíz** del proyecto (la misma donde ejecutaste `pip install`), crea un **nuevo archivo de texto** llamado exactamente:
-        ```
-        .env
-        ```
-        *(Puede no ser visible en algunos sistemas, habilita `ver archivos ocultos`)*.
-    *   Abre este archivo `.env` con un editor de texto simple o IDE (como Notepad++, VS Code, Sublime Text, Nano, etc.).
-    *   Pega la siguiente línea dentro del archivo, **reemplazando `"TU_API_KEY_AQUI"` con la clave API real que obtuviste de Google AI Studio**:
-        ```dotenv
-        GOOGLE_API_KEY="TU_API_KEY_AQUI"
-        ```
-    *   **(Opcional) Para Depuración:** Si quieres activar los mensajes de DEBUG para ver qué hace el programa por dentro (útil si algo falla), añade esta segunda línea al archivo `.env`:
-        ```dotenv
-        SUMARIOCOMMIT_DEBUG="1"
-        ```
-        *Si no la añades o pones `"0"`, los mensajes de DEBUG estarán desactivados.*
-    *   **Guarda** el archivo `.env`. **¡Este archivo es crucial y contiene tu clave API!.** (El archivo `.gitignore` incluido en el proyecto está configurado para evitar que subas `.env` accidentalmente si usas Git para gestionar este propio proyecto, de nada).
+3.  **Configura tu API Key (Archivo `.env`):**
+    *   **La primera vez que ejecutes la aplicación**, detectará que falta el archivo `.env` y **lo creará automáticamente** por ti en la carpeta raíz.
+    *   Verás un mensaje de **¡ACCIÓN REQUERIDA!**. El programa se pausará.
+    *   **Necesitas editar este archivo `.env` recién creado:**
+        *   Ábrelo con un editor de texto simple (Bloc de Notas, VS Code, etc.).
+        *   Encuentra la línea que dice `GOOGLE_API_KEY="TU_API_KEY_AQUI"`.
+        *   **Reemplaza `"TU_API_KEY_AQUI"` con tu clave API real** que obtuviste de Google AI Studio.
+        *   Guarda los cambios en el archivo `.env`.
+    *   Una vez editado y guardado, vuelve a la terminal y presiona `Enter` para que la aplicación continúe.
+    *   **(Opcional) Para Depuración:** El archivo `.env` también contiene la línea `SUMARIOCOMMIT_DEBUG="0"`. Puedes cambiar el `0` por `1` si quieres activar los mensajes detallados de depuración.
+    *   **¡Importante!** El archivo `.env` contiene tu clave secreta. El `.gitignore` del proyecto está configurado para **NO** subirlo a repositorios públicos. ¡Mantenla segura!
 
 ## Ejecución
 
 1.  Asegúrate de estar en tu **terminal**, dentro de la **carpeta raíz** del proyecto.
-2.  Ejecuta el programa con el comando:
+2.  Si es la primera ejecución, sigue el paso 3 de "Puesta en Marcha" para configurar tu API Key cuando se cree el archivo `.env`.
+3.  Ejecuta el programa con el comando:
     ```bash
     python main.py
     ```
-3.  ¡Listo! Verás el menú principal en la consola.
-    *   **La primera vez que lo ejecutes**, como no sabe dónde está tu proyecto, deberás usar la opción **`3. Cambiar/Establecer Repositorio Git`**. Introduce la ruta completa a la carpeta de tu repositorio Git local (el proyecto del que quieres hacer resúmenes).
+4.  ¡Listo! Verás el menú principal en la consola.
+    *   Como es la primera vez (o si `config.json` no es válido), deberás usar la opción **`3. Cambiar/Establecer Repositorio Git`**. Introduce la ruta completa a la carpeta de tu repositorio Git local.
     *   Una vez configurado el repositorio, puedes usar la opción **`1`** para el último commit o la **`2`** para elegir uno específico.
     *   Navega por el resto de opciones usando los números indicados.
     *   Selecciona **`0`** para salir de la aplicación.
 
-## Opciones del Menú (Resumen Rápido)
+## Opciones del Menú
 
 *   `1`: Resumen del último commit.
 *   `2`: Elige un commit de una lista para resumir.
@@ -90,4 +83,4 @@ Si activaste `SUMARIOCOMMIT_DEBUG="1"` en tu archivo `.env`, verás mensajes adi
 
 ## Licencia
 
-(En proceso...)
+(A definir - Ej: MIT License)

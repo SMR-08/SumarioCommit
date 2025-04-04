@@ -1,6 +1,6 @@
 # SumarioCommit: Resúmenes de tu Día con IA desde Git
 
-**SumarioCommit** es una herramienta de línea de comandos (CLI) creada para simplificar tus resumenes de trabajo diario en la empresa en las practicas. Funciona de la siguiente manera:
+**SumarioCommit** es una herramienta de línea de comandos (CLI) creada para simplificar tus resumenes de trabajo diario en la empresa de las practicas. Funciona de la siguiente manera:
 
 1.  Analiza los cambios (`diff`) del último commit (o uno específico que elijas) de tu repositorio Git local.
 2.  Envía esos cambios a la IA de Google Gemini (modelo Flash por defecto).

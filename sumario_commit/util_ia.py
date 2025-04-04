@@ -48,10 +48,10 @@ Formato estricto de la respuesta:
 - ...
 
 **Resumen General de Tareas:**
-[Un resumen muy breve (2-3 líneas máximo) describiendo en general qué tipo de trabajo se realizó en este commit.]
+[Un resumen muy breve (2-3 líneas máximo) describiendo en general qué tipo de trabajo se realizó en este commit, deberas escribirlo en primera persona como el usuario, directo y al grano.]
 - ...
 **Resumen General de Aprendizaje:**
-[Un resumen muy breve (2-3 líneas máximo) sobre los aprendizajes, descubrimientos o dificultades clave encontradas, si se pueden inferir.]
+[Un resumen muy breve (2-3 líneas máximo) sobre los aprendizajes, descubrimientos o dificultades clave encontradas, si se pueden inferir, deberas escribirlo en primera persona como el usuario, directo y al grano.]
 - ...
 
 Si no puedes inferir claramente alguna de las secciones (especialmente Aprendizajes) a partir del patch, deja esa sección vacía o indica "No se infieren aprendizajes directos del patch". No inventes información. Si no hay tareas claras, indícalo también.

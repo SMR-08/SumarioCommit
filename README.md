@@ -1,4 +1,4 @@
-# SumarioCommit: Resúmenes de tu Día con IA desde Git
+# SumarioCommit (Nombre en proceso...): Resúmenes de tu día con IA desde Git para tus practicas.
 
 **SumarioCommit** es una herramienta de línea de comandos (CLI) creada para simplificar tus resumenes de trabajo diario en la empresa de las practicas. Funciona de la siguiente manera:
 
